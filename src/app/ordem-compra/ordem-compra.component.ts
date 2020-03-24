@@ -17,6 +17,9 @@ export class OrdemCompraComponent implements OnInit {
   public idPedidoCompra: number
   public itensCarrinho: ItemCarrinho[] = []
 
+  //controlar o botão confirmar compra
+  public formEstado: string = 'disabled'
+
   public formulario: FormGroup = new FormGroup({
     'endereco': new FormControl(null, [ Validators.required, Validators.minLength(3), Validators.maxLength(120) ]),
     'numero': new FormControl(null, [ Validators.required, Validators.minLength(1), Validators.maxLength(20) ]),
@@ -33,6 +36,12 @@ export class OrdemCompraComponent implements OnInit {
     this.itensCarrinho = this.carrinhoService.exibirItens()
     console.log(this.itensCarrinho)
   }
+
+  /*public habilitaForm(): void {
+    if  (this.enderecoValido === true && this.numeroValido === true && this.formaPagamentoValido === true) {
+     this.formEstado = ''
+    }
+  }*/
 
   public confirmarCompra(): void {
     if (this.formulario.status === 'INVALID') {
@@ -63,6 +72,7 @@ export class OrdemCompraComponent implements OnInit {
             this.carrinhoService.limparCarrinho()
           })
       }
+      
     }
   }
 

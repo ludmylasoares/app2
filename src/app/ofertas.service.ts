@@ -1,4 +1,4 @@
-import { HttpClient} from '@angular/common/http'
+import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 import { Observable } from 'rxjs/Observable'
 import { Oferta } from './shared/oferta.model'
@@ -53,7 +53,7 @@ export class OfertasService {
     public pesquisaOfertas(termo: string): Observable<Oferta[]> {
         return this.http.get(`${URL_API}/ofertas?descricao_oferta_like=${termo}`)
             .retry(10)
-            .map((resposta: any) => resposta[0])
+            .map((resposta: any) => resposta)
 
     }
 }

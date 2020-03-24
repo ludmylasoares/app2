@@ -113,9 +113,10 @@
 
       <hr />
       <button 
-        type="submit" 
-        class="btn btn-primary btn-lg"
-      >Confirmar compra</button>
+        type="button" 
+        class="btn btn-primary btn-lg" 
+        (click)="confirmarCompra()"
+      >Confirmar compra</button> <!--//[disabled]="formEstado"/*-->
     </form>
   </div>
 

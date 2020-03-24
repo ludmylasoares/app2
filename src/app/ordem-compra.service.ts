@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { HttpClient, HttpRequest, HttpHeaders, HttpResponse } from '@angular/common/http'
+import { HttpClient, HttpHeaders} from '@angular/common/http'
 import { Observable } from 'rxjs/Observable'
 
 import { URL_API } from './app.api'
@@ -12,6 +12,7 @@ export class OrdemCompraService {
     constructor(private http: HttpClient) {}
 
     public efetivarCompra(pedido: Pedido): Observable<number> {
+        console.log(pedido)
 
         let headers: HttpHeaders = new HttpHeaders()
 
@@ -20,8 +21,8 @@ export class OrdemCompraService {
         return this.http.post(
             `${URL_API}/pedidos`,
             JSON.stringify(pedido),
-            { headers: headers }
+            { headers: headers } //new HttpRequest ()
         )
-        .map((resposta: Response) => resposta[0].id )
+        .map((resposta: any) => resposta.id)
     }
 }
