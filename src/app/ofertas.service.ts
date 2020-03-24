@@ -1,4 +1,4 @@
-import { HttpClient, HttpResponse } from '@angular/common/http'
+import { HttpClient} from '@angular/common/http'
 import { Injectable } from '@angular/core'
 import { Observable } from 'rxjs/Observable'
 import { Oferta } from './shared/oferta.model'
@@ -19,27 +19,25 @@ export class OfertasService {
     public getOfertas(): Promise<Oferta[]> {
         return this.http.get(`${URL_API}/ofertas?destaque=true`)
             .toPromise()
-            .then((resposta: Response) => resposta)
+            .then((resposta: any) => resposta)
     }
 
     public getOfertasPorCategoria(categoria: string) : Promise<Oferta[]> {
         return this.http.get(`${URL_API}/ofertas?categoria=${categoria}`)
             .toPromise()
-            .then((resposta: Response) => resposta)
+            .then((resposta: any) => resposta)
     }
 
     public getOfertaPorId(id: number): Promise<Oferta> {
         return this.http.get(`${URL_API}/ofertas?id=${id}`)
             .toPromise()
-            .then((resposta: Response) => {
-                return resposta[0]
-            })
+            .then((resposta: any) => resposta[0])
     }
 
     public getComoUsarOfertaPorId(id: number): Promise<string> {
         return this.http.get(`${URL_API}/como-usar?id=${id}`)
             .toPromise()
-            .then((resposta: Response) => {
+            .then((resposta: any) => {
                 return resposta[0].descricao
             })
     }
@@ -47,7 +45,7 @@ export class OfertasService {
     public getOndeFicaOfertaPorId(id: number): Promise<string> {
         return this.http.get(`${URL_API}/onde-fica?id=${id}`)
             .toPromise()
-            .then((resposta: Response) => {
+            .then((resposta: any) => {
                 return resposta[0].descricao
             })
     }
@@ -55,7 +53,7 @@ export class OfertasService {
     public pesquisaOfertas(termo: string): Observable<Oferta[]> {
         return this.http.get(`${URL_API}/ofertas?descricao_oferta_like=${termo}`)
             .retry(10)
-            .map((resposta: Response) => resposta)
+            .map((resposta: any) => resposta[0])
 
     }
 }
