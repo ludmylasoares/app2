@@ -60,7 +60,7 @@
             type="text" 
             class="form-control" 
             placeholder="Endereço" 
-            autocomplete="off" 
+            autocomplete="on" 
             formControlName="endereco"
           >
           <small *ngIf="formulario.get('endereco').valid && formulario.get('endereco').touched" class="form-text text-success">Ok</small>
@@ -72,7 +72,7 @@
             type="text" 
             class="form-control" 
             placeholder="Número" 
-            autocomplete="off"
+            autocomplete="on"
             formControlName="numero"
           >
           <small *ngIf="formulario.get('numero').valid && formulario.get('numero').touched" class="form-text text-success">Ok</small>
@@ -84,7 +84,7 @@
             type="text" 
             class="form-control" 
             placeholder="Complemento" 
-            autocomplete="off"
+            autocomplete="on"
             formControlName="complemento"
           >
         </div>

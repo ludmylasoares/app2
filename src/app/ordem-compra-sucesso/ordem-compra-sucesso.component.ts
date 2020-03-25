@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Pedido } from '../shared/pedido.model'
+import { ItemCarrinho } from '../shared/item-carrinho.model'
 
 @Component({
   selector: 'app-ordem-compra-sucesso',
@@ -7,7 +9,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class OrdemCompraSucessoComponent implements OnInit {
 
-  @Input() public idPedidoCompra: number
+  @Input() 
+  
+  public idPedidoCompra: number
+  public pedido: Pedido
 
   constructor() { }
 

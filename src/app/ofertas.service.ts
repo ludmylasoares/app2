@@ -1,13 +1,13 @@
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpErrorResponse } from '@angular/common/http'
 import { Injectable } from '@angular/core'
-import { Observable } from 'rxjs/Observable'
+import { Observable, throwError } from 'rxjs'
 import { Oferta } from './shared/oferta.model'
 
 import { URL_API } from './app.api'
 
+import { retry, catchError, map } from 'rxjs/operators'
+
 import 'rxjs/add/operator/toPromise'
-import 'rxjs/add/operator/map'
-import 'rxjs/add/operator/retry'
 
 @Injectable()
 export class OfertasService {
@@ -52,8 +52,23 @@ export class OfertasService {
 
     public pesquisaOfertas(termo: string): Observable<Oferta[]> {
         return this.http.get(`${URL_API}/ofertas?descricao_oferta_like=${termo}`)
-            .retry(10)
-            .map((resposta: any) => resposta)
-
+        .pipe(
+            retry(7),
+            map((response: any) => { return response }),
+            catchError(this.handleError)
+        )
+    }
+        // Manipulação de erros
+        handleError(error: HttpErrorResponse) {
+            let errorMessage = '';
+                if (error.error instanceof ErrorEvent) {
+                    // Erro ocorreu no lado do cliente
+                    errorMessage = error.error.message;
+                } else {
+                    // Erro ocorreu no lado do servidor
+                    errorMessage = `Código do erro: ${error.status}, ` + `mensagem: ${error.message}`;
+        }
+            console.log(errorMessage)
+                return throwError(errorMessage)
     }
 }
