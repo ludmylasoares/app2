@@ -1,9 +1,11 @@
-# App2 - Pássaro Urbano (https://app2-ludmyla-soares.s3-website.us-east-2.amazonaws.com)
-<a href="https://www.udemy.com/course/curso-de-desenvolvimento-web-com-es6-typescript-e-angular-4/"> Curso de Desenvolvimento WEB com ES6, TypeScript e Angular 4!</a>
+# App2 - Pássaro Urbano
+ Curso de Desenvolvimento WEB com ES6, TypeScript e Angular 4!
+
+<a href="https://app2-ludmyla-soares.s3-website.us-east-2.amazonaws.com">Demonstração</a>
 
 Fonte: </br>
-Plataforma <a href="https:/www.udemy.com">Udemy.com</a> </br>
-Por Jorge Sant Ana (Programador) </br>
+Plataforma de cursos: <a href="https:/www.udemy.com">Udemy.com</a> </br>
+Por <a href="https://www.udemy.com/course/curso-de-desenvolvimento-web-com-es6-typescript-e-angular-4/">Jorge Sant Ana </a> (Programador) </br>
 Adaptado por <a href="https:/www.ludmylasoares.site">Ludmyla Soares</a> (Analista e Desenvolvedora de Sistemas)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
