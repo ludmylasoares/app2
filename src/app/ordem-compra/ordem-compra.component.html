@@ -116,7 +116,13 @@
         type="button" 
         class="btn btn-primary btn-lg" 
         (click)="confirmarCompra()"
-      >Confirmar compra</button> <!--//[disabled]="formEstado"/*-->
+        >Confirmar compra</button> <!--//[disabled]="formEstado"/*-->
+
+      <button 
+        type="button" 
+        class="btn btn-primary btn-lg" 
+        [routerLink]="['/oferta']"
+       >Continuar comprando</button>
     </form>
   </div>
 

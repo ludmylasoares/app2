@@ -301,5 +301,8 @@
       ],
       "id": 5
     }
-  ]
+  ],
+  "database": {
+    "rules": "database.rules.json"
+  }
 }
