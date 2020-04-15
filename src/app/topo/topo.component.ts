@@ -15,7 +15,7 @@ import { Oferta } from '../shared/oferta.model'
 })
 export class TopoComponent implements OnInit {
 
-  public titulo: string = 'LudmylaSoares'
+  public titulo: string = 'Ludmyla Soares'
 
   public ofertas: Observable<Oferta[]>
   
