@@ -17,6 +17,8 @@ export class TopoComponent implements OnInit {
 
   public titulo: string = 'Ludmyla Soares'
 
+  public estado: string = 'visivel'
+
   public ofertas: Observable<Oferta[]>
   
   private subjectPesquisa: Subject<string> = new Subject<string>()

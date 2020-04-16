@@ -25,6 +25,7 @@ import { ComoUsarComponent } from './oferta/como-usar/como-usar.component';
 import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
 import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra-sucesso.component';
+import { BannerComponent } from './banner/banner.component';
 
 registerLocaleData(pt);
 
@@ -41,7 +42,8 @@ registerLocaleData(pt);
     OndeFicaComponent,
     DescricaoReduzida,
     OrdemCompraComponent,
-    OrdemCompraSucessoComponent
+    OrdemCompraSucessoComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,

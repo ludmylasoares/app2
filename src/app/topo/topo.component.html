@@ -12,6 +12,7 @@
             <li>Pipes (Utilização de pipes nativos e criação de novos pipes) e; </li>
             <li>Formulários (Template forms / Reactive forms).</li>
           </ul>
+          
           <table>
             <tbody>
               <tr>
@@ -27,7 +28,7 @@
                   style="text-align: left;
                          width: 66px;">
                   <a title="Deploy na Nuvem" 
-                     href="http://app1-ludmyla-soares.s3-website.us-east-2.amazonaws.com/" 
+                     href="http://app2-ludmyla-soares.s3-website.us-east-2.amazonaws.com/" 
                      target="_blank"
                      rel="noopener">
                      <img style="display: block; 
@@ -42,7 +43,7 @@
                 <td style="text-align: left;
                           width: 58px;">
                   <a title="Versionamento" 
-                     href="https://github.com/ludmylasoares/app1" 
+                     href="https://github.com/ludmylasoares/app2" 
                      target="_blank" 
                      rel="noopener">
                       <img
@@ -55,11 +56,11 @@
               </tr>
             </tbody>
           </table>
+
       </div>
      </div> 
     </div> 
-  <nav 
-    class="navbar navbar-light bg-light custom">
+  <nav class="navbar navbar-light bg-light custom">
     <table style="width: 250px;">
       <tbody>
         <tr>
@@ -93,17 +94,16 @@
           aria-controls="navbarToggleExternalContent" 
           aria-expanded="false" 
           aria-label="Alterna navegação">
-          <span
-            class="navbar-toggler-icon">
-          </span>
+          <span class="navbar-toggler-icon"></span>
         </button>
-  </nav>
-
+      </nav>
+      <!--Aqui termina o menu personalizado-->
+      <!--Aqui começa o menu da aplicação-->
     <nav class="navbar navbar-light bg-faded">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <a class="navbar-brand" routerLink="">
+            <a class="navbar-brand" routerLink="/">
               <img src="/assets/logo.png" />
             </a>
           </div>
@@ -141,6 +141,6 @@
       </ul>
     </div>
 </div>
-<div class="banner" style="margin-top: 0px">
-  <img src="/assets/banners/img_1.jpg" />
+<div class="d-flex align-items-start" [@animacao-banner]="estado">
+  <app-banner></app-banner>
 </div>
