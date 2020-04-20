@@ -1,65 +1,35 @@
-import { Component, OnInit } from '@angular/core'
-
-import { trigger, state, style, transition, animate } from '@angular/animations';
-
-import { Imagem } from './imagem.model'
-
+import { Component, ViewChild } from '@angular/core';
+import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-banner',
-  templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.css'],
-  animations: [
-    trigger('banner', [
-      state('escondido', style({
-        opacity: 0
-      })),
-      state('visivel', style({
-        opacity: 1
-      })),
-      transition('escondido <=> visivel', animate('1s ease-in'))
-    ])
-  ]
-})
-export class BannerComponent implements OnInit {
+  selector: 'app-banner', 
+  templateUrl: './banner.component.html'})
+export class BannerComponent {
+  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
-  public estado: string = 'visivel'
+  paused = false;
+  unpauseOnArrow = true;
+  pauseOnIndicator = true;
+  pauseOnHover = true;
 
-  public imagens: Imagem[] = [
-    { estado: 'visivel', url: '/assets/banner/img_1.jpg' },
-    { estado: 'escondido', url: '/assets/banner/img_2.jpg' },
-    { estado: 'escondido', url: '/assets/banner/img_3.jpg' },
-    { estado: 'escondido', url: '/assets/banner/img_4.jpg'},
+  @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
 
-  ]
-
-  constructor() { }
-
-  ngOnInit() {
-    setTimeout(() => this.logicaRotacao(), 3000)
-  }
-
-  public logicaRotacao(): void {
-    
-    //auxilia na exibição da imagem seguinte
-    let idx: number
-
-    //ocultar imagem
-    for(let i:number = 0; i <= 4; i++) {
-
-      if (this.imagens[i].estado === 'visivel') {
-        this.imagens[i].estado = 'escondido'
-
-        idx = i === 4 ? 0 : i + 1
-
-        break
-      }
+  togglePaused() {
+    if (this.paused) {
+      this.carousel.cycle();
+    } else {
+      this.carousel.pause();
     }
-
-    //exibir a próxima imagem
-    this.imagens[idx].estado = 'visivel'
-
-    setTimeout(() => this.logicaRotacao(), 3000)
+    this.paused = !this.paused;
   }
 
+  onSlide(slideEvent: NgbSlideEvent) {
+    if (this.unpauseOnArrow && slideEvent.paused &&
+      (slideEvent.source === NgbSlideEventSource.ARROW_LEFT || slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)) {
+      this.togglePaused();
+    }
+    if (this.pauseOnIndicator && !slideEvent.paused && slideEvent.source === NgbSlideEventSource.INDICATOR) {
+      this.togglePaused();
+    }
+  }
 }

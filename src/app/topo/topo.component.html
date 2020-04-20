@@ -1,146 +1,51 @@
-<div class="pos-f-t">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-light p-4">
-      <h5 style="color: #f9325c">APP2 - Aplicação web de compra de ofertas, baseado no site Peixe Urbano</h5>
-        <p><span class="text-muted">Experiência adquirida:</span></p>
-          <ul>
-            <li>Como criar e consumir serviços;</li>
-            <li>Promises;</li>
-            <li>Como consumir uma API Rest;</li>
-            <li>Rotas e navegação;</li>
-            <li>Observables e o paradigma de Programação Reativa;</li>
-            <li>Pipes (Utilização de pipes nativos e criação de novos pipes) e; </li>
-            <li>Formulários (Template forms / Reactive forms).</li>
-          </ul>
-          
-          <table>
-            <tbody>
-              <tr>
-                <td style="width: 118px; 
-                           text-align: center;"
-                    class="text-muted" 
-                    style="float:right;
-                           width: 120px; 
-                           text-align: right;">
-                           Disponível em: 
-                </td>
-                <td
-                  style="text-align: left;
-                         width: 66px;">
-                  <a title="Deploy na Nuvem" 
-                     href="http://app2-ludmyla-soares.s3-website.us-east-2.amazonaws.com/" 
-                     target="_blank"
-                     rel="noopener">
-                     <img style="display: block; 
-                                 margin-left: auto; 
-                                 margin-right: auto;" 
-                          src="https://ludmylasoares.site/png/aws.png" 
+<div id="collapseExample" [ngbCollapse]="isCollapsed">
+  <div class="card bg-light mb-3" >
+    <div class="card-body">
+      <h4 style="color: #f9325c; font-family: 'Cuprum', sans-serif;">APP2 - Aplicação web de compra de ofertas, baseado no site Peixe Urbano</h4>
+      <h5><span class="text-muted" style="font-family: 'Cuprum', sans-serif; font-size: px;">Boas práticas em:</span></h5>
+        
+        <table>
+          <tbody>
+            <tr>
+              <h5><td class="text-muted" 
+                  style="float:right;
+                         text-align: center;
+                         font-family: 'Cuprum', sans-serif;">
+                         Disponível em: 
+              </td></h5>
+              <td style="text-align: left;
+                        padding-left: 10px;">
+                <a title="Deploy na Nuvem" 
+                   href="http://app2-ludmyla-soares.s3-website.us-east-2.amazonaws.com/" 
+                   target="_blank"
+                   rel="noopener">
+                    <img  src="/assets/aws.png" 
                           alt="Deploy na Nuvem"  
-                          width="44" 
-                          height="33"/>
-                  </a>
-                </td>
-                <td style="text-align: left;
-                          width: 58px;">
-                  <a title="Versionamento" 
-                     href="https://github.com/ludmylasoares/app2" 
-                     target="_blank" 
-                     rel="noopener">
-                      <img
-                        src="https://ludmylasoares.site/png/github.png" 
-                        alt="Versionamento" 
-                        width="27" 
-                        height="26"/>
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-      </div>
-     </div> 
-    </div> 
-  <nav class="navbar navbar-light bg-light custom">
-    <table style="width: 250px;">
-      <tbody>
-        <tr>
-          <td class="animated flip delay-1s"
-              style="width: 55px;">
-            <a title="Ludmyla Soares" 
-               href="https://ludmylasoares.site" 
-               target="_blank" 
-               rel="noopener">
-                <img style="float: left;" 
-                     src="https://ludmylasoares.site/png/ludmyla.png" 
-                     alt="Ludmyla Soares" 
-                     width="44"/>
-            </a>
-          </td>
-          <td class="animated jackInTheBox delay-2s"
-              style="float: center;
-                     font-family: 'Great Vibes', cursive;
-                     font-size: 32px;
-                     color: #585570;">
-                    {{ titulo }}
-          </td>
-        </tr>
-      </tbody>
-      </table>          
-        <button 
-          class="navbar-toggler" 
-          type="button" 
-          data-toggle="collapse" 
-          data-target="#navbarToggleExternalContent" 
-          aria-controls="navbarToggleExternalContent" 
-          aria-expanded="false" 
-          aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </nav>
-      <!--Aqui termina o menu personalizado-->
-      <!--Aqui começa o menu da aplicação-->
-    <nav class="navbar navbar-light bg-faded">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <a class="navbar-brand" routerLink="/">
-              <img src="/assets/logo.png" />
-            </a>
-          </div>
-          <div class="col-md-6">
-            <input type="text" 
-              class="form-control" 
-              placeholder="Pesquise por ofertas..." 
-              #termoDaPesquisa
-              (keyup)="pesquisa(termoDaPesquisa.value)"
-            />
-            <ul class="list-group" style="position: absolute; z-index: 999">
-              <li class="list-group-item" *ngFor="let oferta of ofertas | async">
-                <a [routerLink]="['/oferta', oferta.id ]" (click)="limpaPesquisa()">
-                  {{ oferta.titulo | descricaoReduzida:15 }}
+                          width="50px" 
+                          height="24px"/>
                 </a>
-              </li>
-            </ul>
-
-          </div>
-          <div class="col-md-2">
-              <a routerLink="/ordem-compra"><img src="/assets/carrinho.png" /></a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  <div class="menu">
-    <div class="container">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" routerLink="/restaurantes">Restaurantes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" routerLink="/diversao">Diversão</a>
-        </li>
-      </ul>
+              </td>
+              <td style="text-align: left;
+                          padding-left: 10px;">
+                <a title="Versionamento" 
+                   href="https://github.com/ludmylasoares/app2" 
+                   target="_blank" 
+                   rel="noopener">
+                    <img src="/assets/github.png" 
+                         alt="Versionamento" 
+                         width="30px" 
+                         height="28px"/>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
     </div>
+  </div>
 </div>
-<div class="d-flex align-items-start" [@animacao-banner]="estado">
-  <app-banner></app-banner>
-</div>
+<p>
+  <a (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+    <img src="/assets/logo-peq.png" alt="Versionamento" width="100px" height="70px"/>
+  </a>
+  Ludmyla Soares
+</p>

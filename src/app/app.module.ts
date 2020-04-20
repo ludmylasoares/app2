@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
 import { registerLocaleData } from '@angular/common';
 import pt from '@angular/common/locales/pt';
 import { RouterModule } from '@angular/router'
-//import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import CarrinhoService from './carrinho.service'
 
@@ -26,6 +28,7 @@ import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
 import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra-sucesso.component';
 import { BannerComponent } from './banner/banner.component';
+import { MenuComponent } from './menu/menu.component';
 
 registerLocaleData(pt);
 
@@ -43,12 +46,16 @@ registerLocaleData(pt);
     DescricaoReduzida,
     OrdemCompraComponent,
     OrdemCompraSucessoComponent,
-    BannerComponent
+    BannerComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgbModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [ CarrinhoService, { provide: LOCALE_ID, useValue: 'pt' } ],
