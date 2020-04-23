@@ -1,6 +1,6 @@
 class Imagem {
     constructor(
-        public estado: string,
+        public id: number,
         public url: string
     ) {}
 }

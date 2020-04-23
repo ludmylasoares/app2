@@ -2,7 +2,12 @@ span {
     color: #fff;
 }
 
-.row {
-    background: #0057A6;
-    padding: 10px
-}
+.bg-custom-1 {
+    background-color: #85144b;
+  }
+  
+  .bg-custom-2 {
+  background-image: linear-gradient(15deg,  #80d0c7 0%, #006ACB 100%);
+  padding: 10px;
+  }
+  

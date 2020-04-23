@@ -1,46 +1,45 @@
     <!--Aqui começa o menu da aplicação-->
       <nav class="navbar navbar-light bg-faded">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <a class="navbar-brand" routerLink="/">
-                <img src="/assets/logo.png" />
-              </a>
-            </div>
-            <div class="col-md-6">
-              <input type="text" 
-                class="form-control" 
-                placeholder="Pesquise por ofertas..." 
-                #termoDaPesquisa
-                (keyup)="pesquisa(termoDaPesquisa.value)"
-              />
-              <ul class="list-group" style="position: absolute; z-index: 999">
-                <li class="list-group-item" *ngFor="let oferta of ofertas | async">
-                  <a [routerLink]="['/oferta', oferta.id ]" (click)="limpaPesquisa()">
-                    {{ oferta.titulo | descricaoReduzida:15 }}
-                  </a>
-                </li>
-              </ul>
-  
-            </div>
-            <div class="col-md-2">
-                <a routerLink="/ordem-compra"><img src="/assets/carrinho.png" /></a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    <div class="menu">
-      <div class="container">
+        <table style="width:100%">
+          <tbody>
+          <tr>
+            <td style="width: 250px;  text-align: center;">
+              <img src="/assets/logo.png" routerLink="/"/>
+            </td>
+            <td style="text-align: left;">
+              <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-lg">Pesquise Ofertas</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Exemplo do tamanho do input" aria-describedby="inputGroup-sizing-lg">
+                  <ul class="list-group" style="position: absolute; z-index: 999">
+                    <li class="list-group-item" *ngFor="let oferta of ofertas | async">
+                      <a [routerLink]="['/oferta', oferta.id ]" (click)="limpaPesquisa()">
+                        {{ oferta.titulo | descricaoReduzida:15 }}
+                      </a>
+                    </li>    
+                  </ul>      
+              </div>
+            </td>
+            <td style="width: 70px; height: 95px; text-align: right;">
+              <a routerLink="/ordem-compra"><img src="/assets/carrinho.png" /></a> 
+            </td>
+          </tr>
+          </tbody>
+          </table>
+         </nav>
+    <nav class="navbar navbar-dark bg-custom-2">
+      <div class="navbar-brand">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" routerLinkActive="active" routerLink="/restaurantes">Restaurantes</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/restaurantes" style="font-family: 'Gotu', sans-serif;">Restaurantes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLinkActive="active" routerLink="/diversao">Diversão</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/diversao" style="font-family: 'Gotu', sans-serif;">Diversão</a>
           </li>
         </ul>
       </div>
-  </div>
-  <div class="d-flex align-items-start" [@animacao-banner]="estado">
+    </nav>
+  <div class="img-fluid" style="width: 100%; margin: 0 auto;">
     <app-banner></app-banner>
   </div>

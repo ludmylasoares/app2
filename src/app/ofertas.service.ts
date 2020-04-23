@@ -19,7 +19,7 @@ export class OfertasService {
     public getOfertas(): Promise<Oferta[]> {
         return this.http.get(`${URL_API}/ofertas?destaque=true`)
             .toPromise()
-            .then((resposta: any) => resposta)
+            .then((resposta: any) => resposta) 
     }
 
     public getOfertasPorCategoria(categoria: string) : Promise<Oferta[]> {

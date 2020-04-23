@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router'
 import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import CarrinhoService from './carrinho.service'
 
 import { ROUTES } from './app.routes'
@@ -51,12 +51,13 @@ registerLocaleData(pt);
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
   ],
   providers: [ CarrinhoService, { provide: LOCALE_ID, useValue: 'pt' } ],
   bootstrap: [AppComponent]

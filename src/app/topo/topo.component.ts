@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-topo',
@@ -12,4 +13,5 @@ export class TopoComponent {
 
   public isCollapsed = true;
 
+  faAngleDown = faAngleDown;
 }

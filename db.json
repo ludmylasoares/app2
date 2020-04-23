@@ -185,124 +185,25 @@
       "descricao": "Estrada Maria das Graças, 12, Salvador - BA "
     }
   ],
-  "pedidos": [
+
+  "pedidos": [],
+
+  "banner": [
     {
-      "endereco": "rua elza",
-      "numero": "123",
-      "complemento": null,
-      "formaPagamento": "dinheiro",
-      "itens": [
-        {
-          "id": 2,
-          "img": {
-            "url": "/assets/ofertas/2/img1.jpg"
-          },
-          "titulo": "Cozinha Mexicana",
-          "descricao_oferta": "Almoço ou Jantar com Rodízio Mexicano delicioso.",
-          "valor": 32.9,
-          "quantidade": 3
-        },
-        {
-          "id": 6,
-          "img": {
-            "url": "/assets/ofertas/6/img1.jpg"
-          },
-          "titulo": "Academia de tiro",
-          "descricao_oferta": "Sessão de tiro dinâmico com Instrutor, Estande, Alvo e Equipamentos.",
-          "valor": 89.9,
-          "quantidade": 1
-        }
-      ],
-      "id": 1
+      "id": 1,
+      "img": "/assets/banner/1/img1.jpg"
     },
     {
-      "endereco": "rua elza",
-      "numero": "123",
-      "complemento": null,
-      "formaPagamento": "dinheiro",
-      "itens": [
-        {
-          "id": 2,
-          "img": {
-            "url": "/assets/ofertas/2/img1.jpg"
-          },
-          "titulo": "Cozinha Mexicana",
-          "descricao_oferta": "Almoço ou Jantar com Rodízio Mexicano delicioso.",
-          "valor": 32.9,
-          "quantidade": 3
-        },
-        {
-          "id": 6,
-          "img": {
-            "url": "/assets/ofertas/6/img1.jpg"
-          },
-          "titulo": "Academia de tiro",
-          "descricao_oferta": "Sessão de tiro dinâmico com Instrutor, Estande, Alvo e Equipamentos.",
-          "valor": 89.9,
-          "quantidade": 1
-        }
-      ],
-      "id": 2
+      "id": 2,
+      "img": "/assets/banner/2/img2.jpg"
     },
     {
-      "endereco": "uling",
-      "numero": "12",
-      "complemento": null,
-      "formaPagamento": "dinheiro",
-      "itens": [
-        {
-          "id": 4,
-          "img": {
-            "url": "/assets/ofertas/4/img1.jpg"
-          },
-          "titulo": "Estância das águas",
-          "descricao_oferta": "Diversão garantida com piscinas, trilhas e muito mais.",
-          "valor": 31.9,
-          "quantidade": 2
-        }
-      ],
-      "id": 3
+      "id": 3,
+      "img": "/assets/banner/3/img3.jpg"
     },
     {
-      "endereco": "rua",
-      "numero": "12",
-      "complemento": null,
-      "formaPagamento": "dinheiro",
-      "itens": [
-        {
-          "id": 2,
-          "img": {
-            "url": "/assets/ofertas/2/img1.jpg"
-          },
-          "titulo": "Cozinha Mexicana",
-          "descricao_oferta": "Almoço ou Jantar com Rodízio Mexicano delicioso.",
-          "valor": 32.9,
-          "quantidade": 1
-        }
-      ],
-      "id": 4
-    },
-    {
-      "endereco": "ininin",
-      "numero": "12",
-      "complemento": null,
-      "formaPagamento": "dinheiro",
-      "itens": [
-        {
-          "id": 4,
-          "img": {
-            "url": "/assets/ofertas/4/img1.jpg"
-          },
-          "titulo": "Estância das águas",
-          "descricao_oferta": "Diversão garantida com piscinas, trilhas e muito mais.",
-          "valor": 31.9,
-          "quantidade": 1
-        }
-      ],
-      "id": 5
+      "id": 4,
+      "img": "/assets/banner/4/img4.jpg"
     }
-  ],
-  "database": {
-    "rules": "database.rules.json"
-  }
+  ]
 }
