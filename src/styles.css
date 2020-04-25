@@ -1,3 +1,44 @@
+/*
+[Folha de Estilo Padrão - v1.0]
+- Nome do Template: Pássaro Urbano
+- URL do Template: http://app2.ludmylasoares.site
+- Version: 1.0.0
+*/
+/* ***** Index da Folha de Estilo *****
+:: 1.0 Importando Fontes
+:: 2.0 Importando todos CSS
+:: 3.0 Base CSS
+:: 4.0 Header
+:: 5.0 Hero
+:: 6.0 Sobre mim
+:: 7.0 Competências
+:: 8.0 Serviço
+:: 9.0 Portifolio
+:: 10.0 Fatos Legais
+:: 11.0 Depoimentos
+:: 12.0 Rodapé
+:: 13.0 Contato
+:: 14.0 Informações de Contato
+:: 15.0 Versões
+:: 16.0 Versão Horizontal CSS
+:: 17.0 Experiências Profissional
+:: 18.0 Formação */
+
+/* :: 1.0 Importando Fontes */
+/*@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");*/
+
+/* :: 2.0 Importando todos CSS 
+@import url(css/bootstrap.min.css);
+@import url(css/owl.carousel.min.css);
+@import url(css/animate.css);
+@import url(css/magnific-popup.css);
+@import url(css/font-awesome.min.css);
+@import url(css/custom-icon.css);
+@import url(css/classy-nav.min.css);
+@import url(css/nice-select.min.css);
+*/
+/* :: 3.0 Base CSS */
+
 h5 {
     color:#999
 }

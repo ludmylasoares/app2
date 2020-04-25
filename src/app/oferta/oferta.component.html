@@ -2,7 +2,7 @@
   <div class="oferta" *ngIf="oferta !== undefined">
     <div class="row">
       <div class="col">
-        <h4>{{ oferta.descricao_oferta }}</h4>
+        <h3>{{ oferta.descricao_oferta }}</h3>
       </div>
     </div>
 
@@ -17,7 +17,7 @@
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6" style="margin-top: 25px">
         <div class="row">
           <div class="col text-center">
             <p>Por apenas</p>
@@ -32,7 +32,7 @@
         </div>
 
         <div class="row">
-          <div class="col text-center">
+          <div class="col text-center" style="margin-bottom: 25px">
             <button 
               type="button" 
               class="btn btn-warning btn-lg"
@@ -48,19 +48,19 @@
 
   </div>
   
-  <div class="row" style="margin-bottom: 25px; margin-bottom: 150px">
+  <div class="row" style="margin-bottom: 60px">
     <div class="col">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" routerLink="como-usar" data-toggle="tab" role="tab" aria-expanded="true">Como usar</a>
+          <a class="nav-link active" routerLink="como-usar" data-toggle="tab" role="tab" style="font-family: 'Mukta Malar', sans-serif" aria-expanded="true">Como usar?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="onde-fica" data-toggle="tab" role="tab">Onde fica?</a>
+          <a class="nav-link" routerLink="onde-fica" data-toggle="tab" role="tab" style="font-family: 'Mukta Malar', sans-serif">Onde fica?</a>
         </li>
       </ul>
-      <div class="tab-content">
-        <router-outlet></router-outlet>
+      <div class="tab-content" style="font-family: 'Mukta Malar', sans-serif; margin-top: 10px">
+      <h4><router-outlet></router-outlet></h4>
       </div>
     </div>
   </div>
-</div>
+</div> 

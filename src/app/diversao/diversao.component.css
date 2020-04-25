@@ -1,10 +1,14 @@
 img {
     border-radius: 5px;
-    width: 320px;
-    height: 200px
+    width: 420px;
+    height: 220px;
 }
 
 .container {
     padding-left: 25px;
     padding-right: 25px;
+}
+.row{
+    padding-left: 15px;
+    padding-right: 15px;
 }
