@@ -1,6 +1,7 @@
 .ordem-compra {
     margin-top: 20px;
     margin-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 input.ng-invalid.ng-touched {

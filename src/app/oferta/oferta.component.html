@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
   <div class="oferta" *ngIf="oferta !== undefined">
     <div class="row">
       <div class="col">
@@ -7,9 +7,9 @@
     </div>
 
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6" >
         <div class="img_capa">
-          <img [src]="oferta.imagens[0].url" />
+          <img [src]="oferta.imagens[0].url" class="img-fluid"/>
         </div>
 
         <div class="thumbnails">
@@ -17,7 +17,7 @@
         </div>
       </div>
 
-      <div class="col-md-6" style="margin-top: 25px">
+      <div class="col-md-6" style="margin-top: 20px">
         <div class="row">
           <div class="col text-center">
             <p>Por apenas</p>
@@ -32,7 +32,7 @@
         </div>
 
         <div class="row">
-          <div class="col text-center" style="margin-bottom: 25px">
+          <div class="col text-center" style="margin-bottom: 20px">
             <button 
               type="button" 
               class="btn btn-warning btn-lg"

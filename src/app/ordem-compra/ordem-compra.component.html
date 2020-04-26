@@ -33,7 +33,7 @@
 
         
         <div class="form-row">
-          <div class="form-group col d-flex justify-content-end">
+          <div class="form-group col d-flex justify-content-end" style="margin-top: 10px;">
             <h4>Total do pedido: {{ carrinhoService.totalCarrinhoCompras() | currency:'BRL':'R$':'':'pt' }}</h4>
           </div>
         </div>
@@ -53,7 +53,7 @@
       <h5>Dados de entrega</h5>
       <hr />
 
-      <div class="form-row">
+      <div class="form-row" style="margin-top: 10px;">
 
         <div class="form-group col-md-6">
           <input 
@@ -63,7 +63,7 @@
             autocomplete="on" 
             formControlName="endereco"
           >
-          <small *ngIf="formulario.get('endereco').valid && formulario.get('endereco').touched" class="form-text text-success">Ok</small>
+          <small *ngIf="formulario.get('endereco').valid && formulario.get('endereco').touched" class="form-text text-info">Ok</small>
           <small *ngIf="!formulario.get('endereco').valid && formulario.get('endereco').touched" class="form-text text-danger">Endereço inválido</small>
         </div>
 
@@ -75,7 +75,7 @@
             autocomplete="on"
             formControlName="numero"
           >
-          <small *ngIf="formulario.get('numero').valid && formulario.get('numero').touched" class="form-text text-success">Ok</small>
+          <small *ngIf="formulario.get('numero').valid && formulario.get('numero').touched" class="form-text text-info">Ok</small>
           <small *ngIf="!formulario.get('numero').valid && formulario.get('numero').touched" class="form-text text-danger">Número inválido</small>
         </div>
 
@@ -90,14 +90,14 @@
         </div>
 
       </div>
-      <br />
+     
 
       <h5>Dados de pagamento</h5>
       <hr />
 
       <div class="form-row">
           
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-3" style="margin-top: 10px;">
           <select 
             class="form-control"
             formControlName="formaPagamento"
