@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-topo',
@@ -10,8 +9,8 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 export class TopoComponent {
 
   public titulo: string = 'Ludmyla Soares'
+  public subtitulo: string = 'Desenvolvedora Front-End'
 
   public isCollapsed = true;
 
-  faAngleDown = faAngleDown;
 }

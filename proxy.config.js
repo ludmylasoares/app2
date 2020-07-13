@@ -1,7 +1,7 @@
 const proxy = [
     {
       context: '/api',
-      target: 'http://localhost:3000',
+      target: 'https://localhost:3000',
       pathRewrite: {'^/api' : ''}
     }
   ];

@@ -38,7 +38,6 @@
 @import url(css/nice-select.min.css);
 */
 /* :: 3.0 Base CSS */
-
 h5 {
     color:#999
 }
@@ -58,5 +57,5 @@ h3 {
 .preco {
     color: #f60;
     font-weight: bold;
-    font-size: 20px
+    font-size: 20px;
 }

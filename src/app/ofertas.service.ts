@@ -1,18 +1,17 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http'
 import { Injectable } from '@angular/core'
-import { Observable, throwError } from 'rxjs'
 import { Oferta } from './shared/oferta.model'
-
 import { URL_API } from './app.api'
-
+import { Observable, of as staticOf, throwError } from 'rxjs/';
 import { retry, catchError, map } from 'rxjs/operators'
-
 import 'rxjs/add/operator/toPromise'
+
+Observable.of = staticOf;
 
 @Injectable()
 export class OfertasService {
 
-    //private url_api = 'http://localhost:3000/ofertas'
+    //private url_api = 'https://localhost:3000/ofertas'
     
     constructor(private http: HttpClient){}
     

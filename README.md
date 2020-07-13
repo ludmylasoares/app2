@@ -1,7 +1,7 @@
 # #App2 - Pássaro Urbano
  Curso de Desenvolvimento WEB com ES6, TypeScript e Angular!
 
-<a href="http://app1.ludmylasoares.site">Demonstração</a>
+<a href="https://app1.ludmylasoares.site">Demonstração</a>
 
 Adaptado por <a href="https:/www.ludmylasoares.site">Ludmyla Soares</a> (Analista e Desenvolvedora de Sistemas)
 

@@ -10,7 +10,7 @@ import { Pedido } from './shared/pedido.model'
 @Injectable({providedIn: 'root'})
 
 export class OrdemCompraService {
-  // URL_API = 'http://localhost:3000/'; // api rest fake
+  // URL_API = 'https://localhost:3000/'; // api rest fake
 
   // injetando o HttpClient
   constructor(private httpClient: HttpClient) { }

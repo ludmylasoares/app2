@@ -1,1 +1,21 @@
+/* link não visitado */
+a:link {
+    color: #f9325c;
+  }
+  
+  /* link visitado*/
+  a:visited {
+    color:#f9325c;
+  }
+  
+  /* mouse passa pelo link */
+a:hover {
+    color: #c98baa;
+    text-decoration: none;
+  }
+  
+  /* link selecionado */
+a:active {
+    color: #87293e;
+  }
 

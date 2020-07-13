@@ -14,7 +14,7 @@ import { Oferta } from '../shared/oferta.model'
 export class OfertaComponent implements OnInit, OnDestroy {
 
   public oferta: Oferta
-
+  
   constructor(
     private route: ActivatedRoute, 
     private ofertasService: OfertasService,

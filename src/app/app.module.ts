@@ -8,14 +8,10 @@ import { RouterModule } from '@angular/router'
 import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import CarrinhoService from './carrinho.service'
-
 import { ROUTES } from './app.routes'
-
 //pipe
 import { DescricaoReduzida } from './util/descricao-reduzida.pipe';
-
 import { AppComponent } from './app.component';
 import { TopoComponent } from './topo/topo.component';
 import { HomeComponent } from './home/home.component';
@@ -51,7 +47,6 @@ registerLocaleData(pt);
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
@@ -59,7 +54,9 @@ registerLocaleData(pt);
     NgbModule,
     RouterModule.forRoot(ROUTES),
   ],
-  providers: [ CarrinhoService, { provide: LOCALE_ID, useValue: 'pt' } ],
+  providers: [ CarrinhoService, { provide: LOCALE_ID, useValue: 'pt' }, 
+                                
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 {
-  "name": "modelo-angular",
+  "name": "app2",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -13,6 +13,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^9.1.2",
+    "@angular/cdk": "^9.1.2",
     "@angular/common": "^9.1.2",
     "@angular/compiler": "^9.1.2",
     "@angular/core": "^9.1.2",
@@ -21,14 +22,16 @@
     "@angular/platform-browser": "^9.1.2",
     "@angular/platform-browser-dynamic": "^9.1.2",
     "@angular/router": "^9.1.2",
-    "@fortawesome/angular-fontawesome": "^0.6.1",
-    "@fortawesome/fontawesome-svg-core": "^1.2.28",
-    "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@ng-bootstrap/ng-bootstrap": "^6.0.3",
-    "animate": "^1.0.0",
+    "animate.css": "^4.1.0",
     "bootstrap": "^4.4.1",
-    "rxjs": "^6.5.5",
-    "rxjs-compat": "^6.5.5",
+    "font-awesome": "^4.7.0",
+    "hammerjs": "^2.0.8",
+    "jquery": "^3.5.1",
+    "lodash-es": "^4.17.15",
+    "popper.js": "^1.16.1",
+    "rxjs": "^6.2.2",
+    "rxjs-compat": "^6.2.2",
     "tslib": "^1.11.1",
     "zone.js": "^0.10.3"
   },
