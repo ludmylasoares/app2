@@ -4,13 +4,14 @@
         <h3>Compra realizada com sucesso!</h3>
     </div>
   </div>
-  <div class="row" style="margin-top: 50px">
+  <div class="row" style="margin-top: 50px; align-items:center;">
       <div class="col d-flex justify-content-center">
-          <p>O número do seu pedido é <b> {{idPedidoCompra}} </b></p>
+        <p>O número do seu pedido é <b> {{idPedidoCompra}} </b>
+          <br/>
+          <br/>
+          <button type="button" class="btn btn-warning btn-lg" [routerLink]="['/oferta']">
+            Continuar comprando</button>
+        </p>  
       </div>
-      <br/>
-      <button 
-      type="button" class="btn btn-warning btn-lg" [routerLink]="['/oferta']">
-        Continuar comprando</button>
     </div>
 </div>
